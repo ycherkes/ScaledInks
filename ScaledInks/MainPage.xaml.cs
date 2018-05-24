@@ -27,7 +27,7 @@ namespace ScaledInks
 
             InkControl.InkPresenter.StrokesCollected += InkPresenter_StrokesCollected;
             InkControl.InkPresenter.StrokesErased += InkPresenter_StrokesErased;
-            _scale = 2F;
+            _scale = 2;
         }
 
         private void InkPresenter_StrokesErased(InkPresenter sender, InkStrokesErasedEventArgs args)
@@ -70,7 +70,7 @@ namespace ScaledInks
 
         private void ScaleSlider_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            _scale =  ScaleSlider.SelectedIndex + 1;
+            _scale =  Scale.SelectedIndex + 1;
             CanvasControl.Invalidate();
         }
     }
